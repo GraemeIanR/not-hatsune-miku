@@ -48,7 +48,8 @@
             this.tickLabel.AutoSize = true;
             this.tickLabel.BackColor = System.Drawing.Color.Transparent;
             this.tickLabel.ForeColor = System.Drawing.Color.Black;
-            this.tickLabel.Location = new System.Drawing.Point(13, 13);
+            this.tickLabel.Location = new System.Drawing.Point(10, 10);
+            this.tickLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tickLabel.Name = "tickLabel";
             this.tickLabel.Size = new System.Drawing.Size(0, 16);
             this.tickLabel.TabIndex = 0;
@@ -57,7 +58,8 @@
             // 
             this.lifeLabel.AutoSize = true;
             this.lifeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lifeLabel.Location = new System.Drawing.Point(444, 13);
+            this.lifeLabel.Location = new System.Drawing.Point(355, 10);
+            this.lifeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lifeLabel.Name = "lifeLabel";
             this.lifeLabel.Size = new System.Drawing.Size(44, 16);
             this.lifeLabel.TabIndex = 1;
@@ -67,7 +69,8 @@
             // 
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.BackColor = System.Drawing.Color.Transparent;
-            this.scoreLabel.Location = new System.Drawing.Point(225, 13);
+            this.scoreLabel.Location = new System.Drawing.Point(180, 10);
+            this.scoreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(44, 16);
             this.scoreLabel.TabIndex = 2;
@@ -77,9 +80,10 @@
             // 
             this.skillLabel.BackColor = System.Drawing.Color.Transparent;
             this.skillLabel.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skillLabel.Location = new System.Drawing.Point(168, 348);
+            this.skillLabel.Location = new System.Drawing.Point(134, 278);
+            this.skillLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.skillLabel.Name = "skillLabel";
-            this.skillLabel.Size = new System.Drawing.Size(136, 88);
+            this.skillLabel.Size = new System.Drawing.Size(109, 70);
             this.skillLabel.TabIndex = 3;
             this.skillLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -87,7 +91,8 @@
             // 
             this.comboLabel.AutoSize = true;
             this.comboLabel.BackColor = System.Drawing.Color.Transparent;
-            this.comboLabel.Location = new System.Drawing.Point(222, 420);
+            this.comboLabel.Location = new System.Drawing.Point(178, 336);
+            this.comboLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.comboLabel.Name = "comboLabel";
             this.comboLabel.Size = new System.Drawing.Size(44, 16);
             this.comboLabel.TabIndex = 4;
@@ -96,10 +101,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(500, 800);
+            this.ClientSize = new System.Drawing.Size(400, 640);
             this.Controls.Add(this.comboLabel);
             this.Controls.Add(this.skillLabel);
             this.Controls.Add(this.scoreLabel);
@@ -107,9 +112,9 @@
             this.Controls.Add(this.tickLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
-
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);

@@ -271,9 +271,8 @@ namespace not_hatsune_miku
                 int y = notes[i].Y + 5;
                 notes[i] = new Rectangle(notes[i].X, y, 50, 30);
             }
-
-            //tick count for debugging
-            //tick++;
+            //add a tick
+            tick++;
 
             //check for losing like a loser
             if (life == 0)
@@ -291,6 +290,7 @@ namespace not_hatsune_miku
             //tickLabel.Text = $"Tick: {tick}";
             lifeLabel.Text = $"Life {life}";
             scoreLabel.Text = $"Score {score}";
+            comboLabel.Text = $"{combo}";
 
 
             //draw hitzones
