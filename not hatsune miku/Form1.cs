@@ -20,7 +20,6 @@ namespace not_hatsune_miku
 
         bool escPressed = false;
 
-
         int tick = 0;
         int score = 0;
         int life = 100;
@@ -66,9 +65,9 @@ namespace not_hatsune_miku
         SolidBrush blackBrush = new SolidBrush(Color.Black);
 
         //define debugging brushes
-        SolidBrush peHitzone = new SolidBrush(Color.Red);
-        SolidBrush grHitzone = new SolidBrush(Color.Gray);
-        SolidBrush goHitzone = new SolidBrush(Color.Green);
+        //SolidBrush peHitzone = new SolidBrush(Color.Red);
+        //SolidBrush grHitzone = new SolidBrush(Color.Gray);
+        //SolidBrush goHitzone = new SolidBrush(Color.Green);
 
         //define note lanes
         int laneD = 0;
@@ -254,6 +253,7 @@ namespace not_hatsune_miku
                 }
             }
 
+            //check for missed notes
             for (int i = 0; i < notes.Count; i++)
             {
                 if (notes[i].Y > this.Height)
@@ -265,34 +265,32 @@ namespace not_hatsune_miku
                 }
             }
 
+            //move notes
             for (int i = 0; i < notes.Count; i++)
             {
                 int y = notes[i].Y + 5;
                 notes[i] = new Rectangle(notes[i].X, y, 50, 30);
             }
 
-            tick++;
+            //tick count for debugging
+            //tick++;
 
-            if (escPressed == true)
-            {
-                Close();
-            }
-
+            //check for losing like a loser
             if (life == 0)
             {
                 gameTimer.Stop();
             }
 
+            //redraw screen
             Refresh();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //draw all relevant variables
-            tickLabel.Text = $"Tick: {tick}";
+            //tickLabel.Text = $"Tick: {tick}";
             lifeLabel.Text = $"Life {life}";
             scoreLabel.Text = $"Score {score}";
-            comboLabel.Text = $"{combo}";
 
 
             //draw hitzones
@@ -313,7 +311,6 @@ namespace not_hatsune_miku
             {
                 e.Graphics.FillRectangle(blueBrush, notes[i]);
             }
-
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -336,6 +333,12 @@ namespace not_hatsune_miku
                 case 'e':
                     escPressed = true;
                     break;
+            }
+
+            //close game
+            if (escPressed == true)
+            {
+                Close();
             }
         }
     }
